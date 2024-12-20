@@ -1,0 +1,15 @@
+{
+  "name": "knifegame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_level.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "LITzman",
+  "license": "ISC",
+  "dependencies": {
+    "matter-js": "^0.20.0"
+  }
+}

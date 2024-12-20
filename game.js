@@ -23,6 +23,7 @@ var engine = Engine.create({
 })
 world = engine.world
 
+console.log(window.innerWidth, window.innerHeight)
 SCREEN_WIDTH = window.innerWidth - 100
 SCREEN_HEIGHT = window.innerHeight - 200
 
@@ -66,8 +67,8 @@ LEVELS = [
         }
         }, ),
         obstacles: [
-            Bodies.rectangle(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3, 200, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
-            Bodies.rectangle(SCREEN_WIDTH / 2, (SCREEN_HEIGHT / 3) + 350, 200, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
+            Bodies.rectangle(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3, SCREEN_HEIGHT / 4, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
+            Bodies.rectangle(SCREEN_WIDTH / 2, (SCREEN_HEIGHT / 3) + SCREEN_HEIGHT / 2.6, SCREEN_HEIGHT / 4, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
         ],
         init_message: "Nice! Let's make it harder 💪",
         shame_text: "If cavemen did it, so can you 🦴",
@@ -88,8 +89,8 @@ LEVELS = [
         }
         }, ),
         obstacles: [
-            Bodies.rectangle(SCREEN_WIDTH - 650, SCREEN_HEIGHT - (SCREEN_HEIGHT / 3), 600, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
-            Bodies.rectangle(SCREEN_WIDTH - 650, SCREEN_HEIGHT - (SCREEN_HEIGHT / 3) - 350, 600, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
+            Bodies.rectangle(SCREEN_WIDTH - (SCREEN_HEIGHT / 1.3), SCREEN_HEIGHT - (SCREEN_HEIGHT / 3), SCREEN_HEIGHT / 1.3, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
+            Bodies.rectangle(SCREEN_WIDTH - (SCREEN_HEIGHT / 1.3), SCREEN_HEIGHT - (SCREEN_HEIGHT / 3) - (SCREEN_HEIGHT / 2.5), SCREEN_HEIGHT / 1.3, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
         ],
         init_message: "🥷 True Ninja 🥷",
         shame_text: "You’ve got 99 problems, but this ain’t one 🤘",
@@ -111,8 +112,8 @@ LEVELS = [
         }
         }, ),
         obstacles: [
-            Bodies.rectangle(SCREEN_WIDTH - 400, SCREEN_HEIGHT - (SCREEN_HEIGHT / 3), 400, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
-            Bodies.rectangle(SCREEN_WIDTH - 400, SCREEN_HEIGHT - (SCREEN_HEIGHT / 3) - 250, 400, 200, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
+            Bodies.rectangle(SCREEN_WIDTH - (SCREEN_HEIGHT / 2), SCREEN_HEIGHT - (SCREEN_HEIGHT / 3), (SCREEN_HEIGHT / 2), (SCREEN_HEIGHT / 4), { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
+            Bodies.rectangle(SCREEN_WIDTH - (SCREEN_HEIGHT / 2), SCREEN_HEIGHT - (SCREEN_HEIGHT / 3) - (SCREEN_HEIGHT / 3.2), (SCREEN_HEIGHT / 2), (SCREEN_HEIGHT / 4), { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
         ],
         init_message: "Wait a minute, Where's your weapon?"
     },

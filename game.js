@@ -24,8 +24,8 @@ var engine = Engine.create({
 world = engine.world
 
 console.log(window.innerWidth, window.innerHeight)
-SCREEN_WIDTH = window.innerWidth - 100
-SCREEN_HEIGHT = window.innerHeight - 200
+SCREEN_WIDTH = window.innerWidth
+SCREEN_HEIGHT = window.innerHeight - (window.innerHeight / 965 * 200)
 
 OBSTACLE_RENDER = {
     fillStyle: "#ada587"
@@ -36,13 +36,13 @@ LEVELS = [
         knife: true,
         sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
         sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 4),
-        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, 200, {
+        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, SCREEN_HEIGHT / 965 * 200, {
             isStatic: true, 
             render: {
                 sprite: {
                     texture: './img/target.png',
-                    xScale: 0.3,
-                    yScale: 0.4
+                    xScale: SCREEN_WIDTH / 1920 * 0.3,
+                    yScale: SCREEN_HEIGHT / 965 * 0.4
                 }
         }
         }, ),
@@ -56,13 +56,13 @@ LEVELS = [
         knife: true,
         sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
         sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 5),
-        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT - (SCREEN_HEIGHT / 4), 10, 200, {
+        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT - (SCREEN_HEIGHT / 4), 10, SCREEN_HEIGHT / 965 * 200, {
             isStatic: true, 
             render: {
                 sprite: {
                     texture: './img/target.png',
-                    xScale: 0.3,
-                    yScale: 0.4
+                    xScale: SCREEN_WIDTH / 1920 * 0.3,
+                    yScale: SCREEN_HEIGHT / 965 * 0.4
                 }
         }
         }, ),
@@ -76,15 +76,15 @@ LEVELS = [
     {
         // LEVEL 3
         knife: true,
-        sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
-        sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 5),
-        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, 250, {
+        sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 6.5),
+        sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 4),
+        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, SCREEN_HEIGHT / 965 * 250, {
             isStatic: true, 
             render: {
                 sprite: {
                     texture: './img/target.png',
-                    xScale: 0.3,
-                    yScale: 0.5
+                    xScale: SCREEN_WIDTH / 1920 * 0.3,
+                    yScale: SCREEN_HEIGHT / 965 * 0.5
                 }
         }
         }, ),
@@ -101,13 +101,13 @@ LEVELS = [
         knife: false,
         sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
         sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 5),
-        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, 250, {
+        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, SCREEN_HEIGHT / 965 * 250, {
             isStatic: true, 
             render: {
                 sprite: {
                     texture: './img/target.png',
-                    xScale: 0.3,
-                    yScale: 0.5
+                    xScale: SCREEN_WIDTH / 1920 * 0.3,
+                    yScale: SCREEN_HEIGHT / 965 * 0.5
                 }
         }
         }, ),
@@ -131,8 +131,7 @@ var render = Render.create({
         wireframes: false,
         showAngleIndicator: false,
         background: 'transparent',
-        wireframeBackground: 'transparent',
-    }
+     }
 })
 
 Render.run(render)
@@ -157,8 +156,8 @@ function level(level) {
         render: {
             sprite: {
                 texture: './img/knife.png',
-                xScale: 0.2,
-                yScale: 0.2
+                xScale: SCREEN_WIDTH / 1920 * 0.2,
+                yScale: SCREEN_HEIGHT / 965 * 0.2
             }
         }
     }

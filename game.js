@@ -76,6 +76,28 @@ LEVELS = [
     {
         // LEVEL 3
         knife: true,
+        sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
+        sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 5),
+        target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT - (SCREEN_HEIGHT / 4), 10, SCREEN_HEIGHT / 965 * 200, {
+            isStatic: true, 
+            render: {
+                sprite: {
+                    texture: './img/target.png',
+                    xScale: SCREEN_WIDTH / 1920 * 0.3,
+                    yScale: SCREEN_HEIGHT / 965 * 0.4
+                }
+        }
+        }, ),
+        obstacles: [
+            Bodies.rectangle(SCREEN_WIDTH / 3, SCREEN_HEIGHT / 3, SCREEN_HEIGHT / 4, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER }),
+            Bodies.rectangle(SCREEN_WIDTH / 2.5, (SCREEN_HEIGHT / 3) + SCREEN_HEIGHT / 2.6, SCREEN_HEIGHT / 4, SCREEN_HEIGHT / 4, { isStatic: true, chamfer: { radius: 20 }, render: OBSTACLE_RENDER })
+        ],
+        init_message: "Getting serious 🏅",
+        shame_text: "Wanna give Sol a try? 🌞",
+    },
+    {
+        // LEVEL 4
+        knife: true,
         sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 6.5),
         sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 4),
         target: Bodies.rectangle(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2, 10, SCREEN_HEIGHT / 965 * 250, {
@@ -97,7 +119,7 @@ LEVELS = [
 
     },
     {
-        // LEVEL 4
+        // LEVEL 5
         knife: false,
         sling_x: SCREEN_WIDTH - (SCREEN_WIDTH / 7),
         sling_y: SCREEN_HEIGHT - (SCREEN_HEIGHT / 5),
